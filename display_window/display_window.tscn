@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhggfftvfl712"]
+
+[ext_resource type="PackedScene" uid="uid://n2i0p4ukf4c5" path="res://operation_window/operation_window.tscn" id="1_ym0wc"]
+
+[node name="DisplayWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "これが描画ウィンドウです"
+
+[node name="Window" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(960, 540)
+
+[node name="OperationWindow" parent="Window" instance=ExtResource("1_ym0wc")]
