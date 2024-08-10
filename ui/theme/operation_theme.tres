@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c2kxjsvf2fp5y"]
+
+[ext_resource type="FontFile" uid="uid://5vqirhn4vgyt" path="res://ui/font/NotoSansJP-VariableFont_wght.ttf" id="1_bcvix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mijfi"]
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="ImageTexture" id="ImageTexture_rqb6v"]
+
+[sub_resource type="FontVariation" id="FontVariation_v56nv"]
+base_font = ExtResource("1_bcvix")
+variation_opentype = {
+2003265652: 700
+}
+
+[resource]
+default_font = SubResource("FontVariation_v56nv")
+default_font_size = 32
+GridContainer/constants/h_separation = 64
+GridContainer/constants/v_separation = 8
+HBoxContainer/constants/separation = 64
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_mijfi")
+SpinBox/icons/updown = SubResource("ImageTexture_rqb6v")
+VBoxContainer/constants/separation = 8

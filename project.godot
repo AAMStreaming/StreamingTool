@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="StreamingTool"
-run/main_scene="res://display_window/display_window.tscn"
+run/main_scene="res://ui/display_window/display_window.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
+
+[autoload]
+
+DataManager="*res://common/data_manager.gd"
 
 [display]
 
