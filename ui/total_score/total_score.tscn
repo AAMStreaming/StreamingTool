@@ -5,15 +5,16 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(333, 0)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -322.0
-offset_top = -341.0
-offset_bottom = 341.0
+offset_left = -333.0
+offset_top = -377.0
+offset_bottom = 377.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/h_separation = 16
@@ -27,7 +28,9 @@ text = "1組"
 [node name="Class1" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -36,7 +39,9 @@ text = "2組"
 [node name="Class2" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
 
 [node name="Label3" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -45,7 +50,9 @@ text = "3組"
 [node name="Class3" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
 
 [node name="Label4" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -54,7 +61,9 @@ text = "4組"
 [node name="Class4" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
 
 [node name="Label5" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -63,7 +72,9 @@ text = "5組"
 [node name="Class5" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
 
 [node name="Label6" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -72,7 +83,9 @@ text = "6組"
 [node name="Class6" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
 
 [node name="Label7" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -81,4 +94,6 @@ text = "7組"
 [node name="Class7" type="Label" parent="GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "0000点"
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2

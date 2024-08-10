@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhggfftvfl712"]
+[gd_scene load_steps=4 format=3 uid="uid://dhggfftvfl712"]
 
 [ext_resource type="PackedScene" uid="uid://bogfygmnyaako" path="res://ui/total_score/total_score.tscn" id="1_kdvjr"]
-[ext_resource type="PackedScene" uid="uid://n2i0p4ukf4c5" path="res://operation_window/operation_window.tscn" id="1_ym0wc"]
+[ext_resource type="Script" path="res://ui/display_window/display_window.gd" id="1_q86rp"]
+[ext_resource type="PackedScene" uid="uid://n2i0p4ukf4c5" path="res://ui/operation_window/operation_window.tscn" id="1_ym0wc"]
 
 [node name="DisplayWindow" type="Control"]
 layout_mode = 3
@@ -10,12 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "これが描画ウィンドウです"
+script = ExtResource("1_q86rp")
 
 [node name="EventName" type="Label" parent="."]
 unique_name_in_owner = true
@@ -29,6 +25,7 @@ grow_vertical = 0
 text = "ここに競技名が入ります"
 
 [node name="TotalScore" parent="." instance=ExtResource("1_kdvjr")]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
