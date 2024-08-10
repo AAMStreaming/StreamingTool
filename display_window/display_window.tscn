@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhggfftvfl712"]
+[gd_scene load_steps=3 format=3 uid="uid://dhggfftvfl712"]
 
+[ext_resource type="PackedScene" uid="uid://bogfygmnyaako" path="res://ui/total_score/total_score.tscn" id="1_kdvjr"]
 [ext_resource type="PackedScene" uid="uid://n2i0p4ukf4c5" path="res://operation_window/operation_window.tscn" id="1_ym0wc"]
 
 [node name="DisplayWindow" type="Control"]
@@ -16,8 +17,33 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "これが描画ウィンドウです"
 
+[node name="EventName" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -94.0
+offset_right = 1.0
+grow_vertical = 0
+text = "ここに競技名が入ります"
+
+[node name="TotalScore" parent="." instance=ExtResource("1_kdvjr")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
 [node name="Window" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(960, 540)
+always_on_top = true
+content_scale_size = Vector2i(1920, 1080)
+content_scale_mode = 1
+content_scale_aspect = 4
 
 [node name="OperationWindow" parent="Window" instance=ExtResource("1_ym0wc")]
