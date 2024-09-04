@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwx2mr8nfla3"]
+
+[ext_resource type="Script" path="res://ui/score_label/score_label.gd" id="1_ku8t7"]
+
+[node name="ScoreLabel" type="HBoxContainer"]
+theme_override_constants/separation = 100
+script = ExtResource("1_ku8t7")
+
+[node name="TeamName" type="Label" parent="."]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0点"
+horizontal_alignment = 2
