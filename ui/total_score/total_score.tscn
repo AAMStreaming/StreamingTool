@@ -1,99 +1,77 @@
-[gd_scene format=3 uid="uid://bogfygmnyaako"]
+[gd_scene load_steps=2 format=3 uid="uid://bogfygmnyaako"]
+
+[ext_resource type="PackedScene" uid="uid://dwx2mr8nfla3" path="res://ui/score_label/score_label.tscn" id="1_ylrda"]
 
 [node name="TotalScore" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="GridContainer" type="GridContainer" parent="."]
-custom_minimum_size = Vector2(333, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -333.0
-offset_top = -377.0
-offset_bottom = 377.0
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/h_separation = 16
-theme_override_constants/v_separation = 16
-columns = 2
 
-[node name="Label1" type="Label" parent="GridContainer"]
+[node name="Class1" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+unique_name_in_owner = true
 layout_mode = 2
+
+[node name="TeamName" parent="VBoxContainer/Class1" index="0"]
 text = "1組"
 
-[node name="Class1" type="Label" parent="GridContainer"]
+[node name="Class2" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
 
-[node name="Label2" type="Label" parent="GridContainer"]
-layout_mode = 2
+[node name="TeamName" parent="VBoxContainer/Class2" index="0"]
 text = "2組"
 
-[node name="Class2" type="Label" parent="GridContainer"]
+[node name="Class3" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
 
-[node name="Label3" type="Label" parent="GridContainer"]
-layout_mode = 2
+[node name="TeamName" parent="VBoxContainer/Class3" index="0"]
 text = "3組"
 
-[node name="Class3" type="Label" parent="GridContainer"]
+[node name="Class4" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
 
-[node name="Label4" type="Label" parent="GridContainer"]
-layout_mode = 2
+[node name="TeamName" parent="VBoxContainer/Class4" index="0"]
 text = "4組"
 
-[node name="Class4" type="Label" parent="GridContainer"]
+[node name="Class5" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
 
-[node name="Label5" type="Label" parent="GridContainer"]
-layout_mode = 2
+[node name="TeamName" parent="VBoxContainer/Class5" index="0"]
 text = "5組"
 
-[node name="Class5" type="Label" parent="GridContainer"]
+[node name="Class6" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
 
-[node name="Label6" type="Label" parent="GridContainer"]
-layout_mode = 2
+[node name="TeamName" parent="VBoxContainer/Class6" index="0"]
 text = "6組"
 
-[node name="Class6" type="Label" parent="GridContainer"]
+[node name="Class7" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
 
-[node name="Label7" type="Label" parent="GridContainer"]
-layout_mode = 2
+[node name="TeamName" parent="VBoxContainer/Class7" index="0"]
 text = "7組"
 
-[node name="Class7" type="Label" parent="GridContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-text = "0点"
-horizontal_alignment = 2
+[editable path="VBoxContainer/Class1"]
+[editable path="VBoxContainer/Class2"]
+[editable path="VBoxContainer/Class3"]
+[editable path="VBoxContainer/Class4"]
+[editable path="VBoxContainer/Class5"]
+[editable path="VBoxContainer/Class6"]
+[editable path="VBoxContainer/Class7"]
