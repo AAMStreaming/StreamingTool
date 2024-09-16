@@ -28,10 +28,31 @@ layout_mode = 2
 layout_mode = 2
 text = "競技名"
 
-[node name="Event" type="LineEdit" parent="VBoxContainer/PanelContainer2/EventContainer"]
+[node name="Event" type="OptionButton" parent="VBoxContainer/PanelContainer2/EventContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
+item_count = 10
+selected = 0
+popup/item_0/text = "中一　水風船騎馬"
+popup/item_0/id = 0
+popup/item_1/text = "中二　酔いどれ親父をつかまえて"
+popup/item_1/id = 1
+popup/item_2/text = "中三　国の破壊"
+popup/item_2/id = 2
+popup/item_3/text = "高一　合戦"
+popup/item_3/id = 3
+popup/item_4/text = "高二　騎馬戦"
+popup/item_4/id = 4
+popup/item_5/text = "高三　騎馬戦"
+popup/item_5/id = 5
+popup/item_6/text = "中一中二合同　玉入れしっぽ取り"
+popup/item_6/id = 6
+popup/item_7/text = "中三　いかだ流し"
+popup/item_7/id = 7
+popup/item_8/text = "高一高二合同　ぼーぼー"
+popup/item_8/id = 8
+popup/item_9/text = "全校リレー"
+popup/item_9/id = 9
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
 layout_mode = 2
