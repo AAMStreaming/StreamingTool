@@ -31,7 +31,6 @@ text = "競技名"
 [node name="Event" type="OptionButton" parent="VBoxContainer/PanelContainer2/EventContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-selected = 0
 item_count = 10
 popup/item_0/text = "中一　水風船騎馬"
 popup/item_0/id = 0
@@ -76,8 +75,7 @@ text = "1組"
 [node name="Class1" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
@@ -86,8 +84,7 @@ text = "2組"
 [node name="Class2" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="Label3" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
@@ -96,8 +93,7 @@ text = "3組"
 [node name="Class3" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="Label4" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
@@ -106,8 +102,7 @@ text = "4組"
 [node name="Class4" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="Label5" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
@@ -116,8 +111,7 @@ text = "5組"
 [node name="Class5" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="Label6" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
@@ -126,8 +120,7 @@ text = "6組"
 [node name="Class6" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="Label7" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
@@ -136,8 +129,7 @@ text = "7組"
 [node name="Class7" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 9900.0
-step = 100.0
+max_value = 10000.0
 
 [node name="UpdateButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://b07844rvbihvr"]
 
-[ext_resource type="FontFile" uid="uid://5vqirhn4vgyt" path="res://ui/font/NotoSansJP-VariableFont_wght.ttf" id="1_ufvcc"]
+[ext_resource type="FontFile" uid="uid://cvgijap57peg6" path="res://ui/font/NotoSansJP-VariableFont_wght.ttf" id="1_ufvcc"]
 
 [sub_resource type="FontVariation" id="FontVariation_v56nv"]
 base_font = ExtResource("1_ufvcc")
