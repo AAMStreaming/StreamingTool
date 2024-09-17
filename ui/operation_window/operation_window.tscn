@@ -31,8 +31,8 @@ text = "競技名"
 [node name="Event" type="OptionButton" parent="VBoxContainer/PanelContainer2/EventContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-item_count = 10
 selected = 0
+item_count = 10
 popup/item_0/text = "中一　水風船騎馬"
 popup/item_0/id = 0
 popup/item_1/text = "中二　酔いどれ親父をつかまえて"
