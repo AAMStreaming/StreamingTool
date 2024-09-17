@@ -5,6 +5,7 @@
 [node name="ScoreLabel" type="HBoxContainer"]
 theme_override_constants/separation = 100
 script = ExtResource("1_ku8t7")
+metadata/_edit_horizontal_guides_ = [297.0]
 
 [node name="TeamName" type="Label" parent="."]
 layout_mode = 2

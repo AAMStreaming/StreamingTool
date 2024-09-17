@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://5vqirhn4vgyt"
+uid="uid://cvgijap57peg6"
 path="res://.godot/imported/NotoSansJP-VariableFont_wght.ttf-41a9466e0f5b0faba74502cbcc9d1ec9.fontdata"
 
 [deps]
@@ -15,7 +15,6 @@ dest_files=["res://.godot/imported/NotoSansJP-VariableFont_wght.ttf-41a9466e0f5b
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
-disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
@@ -28,13 +27,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-&"size": Vector2i(32, 0),
-&"variation_embolden": 0.0
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}
