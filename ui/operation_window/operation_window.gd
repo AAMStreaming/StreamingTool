@@ -9,7 +9,3 @@ func _on_update_button_pressed():
 			get_node("%TotalScoreContainer/%Class" + str(i + 1)) as SpinBox
 		).value)
 	DataManager.update()
-
-
-func _on_finish_pressed():
-	AnimationManager.finish_animation.emit()

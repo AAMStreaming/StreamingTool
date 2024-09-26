@@ -18,7 +18,6 @@ config/icon="res://icon.png"
 [autoload]
 
 DataManager="*res://common/data_manager.gd"
-AnimationManager="*res://common/animation_manager.gd"
 
 [display]
 

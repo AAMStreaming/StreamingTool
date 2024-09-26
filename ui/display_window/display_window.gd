@@ -1,15 +1,8 @@
 extends Node
 
-@onready var finish_animation: AnimationPlayer = \
-	get_node("%FinishAnimation").get_node("%FinishAnimationPlayer") as AnimationPlayer
 
 func _ready() -> void:
 	DataManager.updated.connect(update_element)
-	
-	AnimationManager.finish_animation.connect(
-		func():
-			finish_animation.play("CutIn")
-	)
 
 
 func update_element() -> void:
