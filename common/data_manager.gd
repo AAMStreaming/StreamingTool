@@ -16,6 +16,7 @@ var comment: String = ""
 var hide_total_score: bool = false
 var match_class: Array[int] = [0, 0]
 var need_match_class: bool = true
+var need_timer: bool = true
 var total_score: Array[int] = [0, 0, 0, 0, 0, 0, 0]
 
 func update() -> void:

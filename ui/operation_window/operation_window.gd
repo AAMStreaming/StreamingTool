@@ -10,6 +10,7 @@ func _on_update_button_pressed():
 	var first: SpinBox = (get_node("%First") as SpinBox)
 	var second: SpinBox = (get_node("%Second") as SpinBox)
 	var need_match_class: CheckButton = (get_node("%NeedMatchClass") as CheckButton)
+	var need_timer: CheckButton = (get_node("%NeedTimer") as CheckButton)
 	
 	DataManager.event_name = event_data[1].replace(" ", "\n")
 	DataManager.grade = event_data[0]
@@ -19,6 +20,7 @@ func _on_update_button_pressed():
 	DataManager.hide_total_score = hide_total_score.button_pressed
 	DataManager.match_class = [first.value, second.value]
 	DataManager.need_match_class = need_match_class.button_pressed
+	DataManager.need_timer = need_timer.button_pressed
 	for i in range(7):
 		DataManager.total_score[i] = int((
 			get_node("%TotalScoreContainer/%Class" + str(i + 1)) as SpinBox

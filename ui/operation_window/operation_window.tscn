@@ -48,13 +48,13 @@ text = "競技名"
 [node name="Event" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/EventContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-item_count = 10
+item_count = 13
 selected = 0
 popup/item_0/text = "中1:水風船騎馬"
 popup/item_0/id = 0
 popup/item_1/text = "中2:酔いどれ 親父をつかまえて"
 popup/item_1/id = 1
-popup/item_2/text = "中3:国の破壊"
+popup/item_2/text = "中3:国取り合戦"
 popup/item_2/id = 2
 popup/item_3/text = "高1:合戦"
 popup/item_3/id = 3
@@ -70,6 +70,12 @@ popup/item_8/text = "高1高2合同:ぼーぼー"
 popup/item_8/id = 8
 popup/item_9/text = ":全校リレー"
 popup/item_9/id = 9
+popup/item_10/text = ":援団騎馬戦"
+popup/item_10/id = 10
+popup/item_11/text = ":部活対抗リレー"
+popup/item_11/id = 11
+popup/item_12/text = ":教員リレー"
+popup/item_12/id = 12
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
@@ -169,7 +175,9 @@ layout_mode = 2
 text = "タイマーを表示するか？"
 
 [node name="NeedTimer" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer5"]
+unique_name_in_owner = true
 layout_mode = 2
+button_pressed = true
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2

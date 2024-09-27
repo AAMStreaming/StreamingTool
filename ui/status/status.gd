@@ -23,6 +23,9 @@ var class_boxes: Array[PackedScene] = [
 func change_match_class_visibility(visibility: bool) -> void:
 	(get_node("%ClassContainer") as HBoxContainer).visible = visibility
 
+func change_timer_visibility(v: bool) -> void:
+	(get_node("%TimerContainer") as ColorRect).visible = v
+
 func change_class(first: int, second: int) -> void:
 	for c in first_con.get_children(): c.queue_free()
 	for c in second_con.get_children(): c.queue_free()

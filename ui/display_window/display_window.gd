@@ -18,6 +18,7 @@ func update_element() -> void:
 	(get_node("%Comment") as Label).text = DataManager.comment
 	status.change_class(DataManager.match_class[0] - 1, DataManager.match_class[1] - 1)
 	status.change_match_class_visibility(DataManager.need_match_class)
+	status.change_timer_visibility(DataManager.need_timer)
 	var match_number_str: String = ""
 	if DataManager.need_match_number:
 		match_number_str = "第" + str(DataManager.match_number) + "試合"
