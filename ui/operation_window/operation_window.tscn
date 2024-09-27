@@ -12,124 +12,196 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_fph6k")
 script = ExtResource("2_1ku6c")
+metadata/_edit_horizontal_guides_ = [-165.0]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 2
+offset_right = 395.0
+offset_bottom = 488.0
 
-[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="EventContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/PanelContainer2/EventContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="EventContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/EventContainer"]
 layout_mode = 2
 text = "競技名"
 
-[node name="Event" type="OptionButton" parent="VBoxContainer/PanelContainer2/EventContainer"]
+[node name="Event" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/EventContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 item_count = 10
-popup/item_0/text = "中一　水風船騎馬"
+selected = 0
+popup/item_0/text = "中1:水風船騎馬"
 popup/item_0/id = 0
-popup/item_1/text = "中二　酔いどれ親父をつかまえて"
+popup/item_1/text = "中2:酔いどれ 親父をつかまえて"
 popup/item_1/id = 1
-popup/item_2/text = "中三　国の破壊"
+popup/item_2/text = "中3:国の破壊"
 popup/item_2/id = 2
-popup/item_3/text = "高一　合戦"
+popup/item_3/text = "高1:合戦"
 popup/item_3/id = 3
-popup/item_4/text = "高二　騎馬戦"
+popup/item_4/text = "高2:騎馬戦"
 popup/item_4/id = 4
-popup/item_5/text = "高三　騎馬戦"
+popup/item_5/text = "高3:騎馬戦"
 popup/item_5/id = 5
-popup/item_6/text = "中一中二合同　玉入れしっぽ取り"
+popup/item_6/text = "中1中2合同:玉入れしっぽ取り"
 popup/item_6/id = 6
-popup/item_7/text = "中三　いかだ流し"
+popup/item_7/text = "中3:いかだ流し"
 popup/item_7/id = 7
-popup/item_8/text = "高一高二合同　ぼーぼー"
+popup/item_8/text = "高1高2合同:ぼーぼー"
 popup/item_8/id = 8
-popup/item_9/text = "全校リレー"
+popup/item_9/text = ":全校リレー"
 popup/item_9/id = 9
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
 
-[node name="TotalScoreContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "試合数を表示するか？"
+
+[node name="NeedMatchNumber" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "第"
+
+[node name="MatchNumber" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "試合"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TotalScoreContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer"]
 layout_mode = 2
 text = "合計得点"
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/PanelContainer/TotalScoreContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer"]
 layout_mode = 2
 columns = 2
 
-[node name="Label1" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label1" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "1組"
 
-[node name="Class1" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class1" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
 
-[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "2組"
 
-[node name="Class2" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class2" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
 
-[node name="Label3" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "3組"
 
-[node name="Class3" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class3" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
 
-[node name="Label4" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "4組"
 
-[node name="Class4" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class4" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
 
-[node name="Label5" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "5組"
 
-[node name="Class5" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class5" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
 
-[node name="Label6" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "6組"
 
-[node name="Class6" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class6" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
 
-[node name="Label7" type="Label" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 layout_mode = 2
 text = "7組"
 
-[node name="Class7" type="SpinBox" parent="VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Class7" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 max_value = 10000.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/HBoxContainer"]
+layout_mode = 2
+text = "得点を????で隠すか？"
+
+[node name="HideTotalScore" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "コメント"
+
+[node name="Comment" type="TextEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
 
 [node name="UpdateButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

@@ -1,44 +1,101 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhggfftvfl712"]
+[gd_scene load_steps=6 format=3 uid="uid://dhggfftvfl712"]
 
 [ext_resource type="PackedScene" uid="uid://bogfygmnyaako" path="res://ui/total_score/total_score.tscn" id="1_kdvjr"]
 [ext_resource type="Script" path="res://ui/display_window/display_window.gd" id="1_q86rp"]
 [ext_resource type="PackedScene" uid="uid://n2i0p4ukf4c5" path="res://ui/operation_window/operation_window.tscn" id="1_ym0wc"]
+[ext_resource type="Texture2D" uid="uid://bpgj8c1qpqhpd" path="res://ui/score_label/asset/comment.png" id="2_8ngnp"]
+[ext_resource type="Texture2D" uid="uid://djhfgillmwryb" path="res://ui/score_label/asset/event.png" id="4_mlvoy"]
 
 [node name="DisplayWindow" type="Node"]
 script = ExtResource("1_q86rp")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="EventName" type="Label" parent="Control"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 946.0
-offset_right = 704.0
-offset_bottom = 1040.0
-grow_vertical = 0
-text = "ここに競技名が入ります"
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TotalScore" parent="Control" instance=ExtResource("1_kdvjr")]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = -1
+anchor_top = 0.95
+anchor_bottom = 0.95
+size_flags_vertical = 3
+
+[node name="CommentTextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 1880.0
-offset_top = 520.0
-offset_right = 1880.0
-offset_bottom = 520.0
+offset_left = -521.0
+offset_bottom = 175.5
 grow_horizontal = 0
+texture = ExtResource("2_8ngnp")
+expand_mode = 5
+
+[node name="Comment" type="Label" parent="Control/CommentTextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_right = 1.0
+anchor_bottom = 0.91
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="EventTextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+offset_right = 445.0
+offset_bottom = 154.0
+texture = ExtResource("4_mlvoy")
+expand_mode = 5
+
+[node name="CenterContainer" type="VBoxContainer" parent="Control/EventTextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.975
+anchor_bottom = 0.93
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EventName" type="Label" parent="Control/EventTextureRect/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_spacing = -25
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="InfoContainer" type="HBoxContainer" parent="Control/EventTextureRect/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Grade" type="Label" parent="Control/EventTextureRect/CenterContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
+
+[node name="MatchNumber" type="Label" parent="Control/EventTextureRect/CenterContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
 
 [node name="Window" type="Window" parent="."]
 initial_position = 1

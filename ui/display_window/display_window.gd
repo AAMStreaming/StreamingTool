@@ -7,29 +7,20 @@ func _ready() -> void:
 
 func update_element() -> void:
 	(get_node("%EventName") as Label).text = DataManager.event_name
-	
-	var sort_total_score: Array = []
-	
-	for i in range(7):
-		sort_total_score.append([DataManager.total_score[i], i])
-	
-	sort_total_score.sort_custom(
-		func(a, b) -> bool:
-			if a[0] > b[0]:
-				return true
-			elif a[0] < b[0]:
-				return false
-			else:
-				if a[1] < b[1]:
-					return true
-				else:
-					return false
-	)
+	(get_node("%InfoContainer") as HBoxContainer).visible = (DataManager.grade != "")
+	(get_node("%Grade") as Label).text = DataManager.grade
+	(get_node("%Comment") as Label).text = DataManager.comment
+	var match_number_str: String = ""
+	if DataManager.need_match_number:
+		match_number_str = "第" + str(DataManager.match_number) + "試合"
+	(get_node("%MatchNumber") as Label).text = match_number_str
 	
 	for i in range(7):
-		var score: int = sort_total_score[i][0]
-		var class_num: int = sort_total_score[i][1]
+		var score: int = DataManager.total_score[i]
+		var class_num: int = i
 		var score_label: ScoreLabel = (get_node("%TotalScore/%Class" + str(class_num + 1)) as ScoreLabel)
 		
-		score_label.get_parent().move_child(score_label, i)
-		score_label.score.text = str(DataManager.total_score[class_num]) + "点"
+		if DataManager.hide_total_score:
+			score_label.score.text = "????"
+		else:
+			score_label.score.text = str(DataManager.total_score[class_num]).pad_zeros(4)

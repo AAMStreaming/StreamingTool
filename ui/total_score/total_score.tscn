@@ -1,77 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://bogfygmnyaako"]
+[gd_scene load_steps=9 format=3 uid="uid://bogfygmnyaako"]
 
 [ext_resource type="PackedScene" uid="uid://dwx2mr8nfla3" path="res://ui/score_label/score_label.tscn" id="1_ylrda"]
+[ext_resource type="Texture2D" uid="uid://dgoaxaeye7x53" path="res://ui/score_label/asset/class1.png" id="2_2j4mn"]
+[ext_resource type="Texture2D" uid="uid://jsqbl4sb8d38" path="res://ui/score_label/asset/class2.png" id="3_cnmdq"]
+[ext_resource type="Texture2D" uid="uid://b0krwt5o4xsjb" path="res://ui/score_label/asset/class3.png" id="4_0f2x1"]
+[ext_resource type="Texture2D" uid="uid://b4o52fb6okeh5" path="res://ui/score_label/asset/class4.png" id="5_7ydl7"]
+[ext_resource type="Texture2D" uid="uid://bxttr80mfrqsy" path="res://ui/score_label/asset/class5.png" id="6_oymyk"]
+[ext_resource type="Texture2D" uid="uid://da3t4tkwaleq7" path="res://ui/score_label/asset/class6.png" id="7_gffwi"]
+[ext_resource type="Texture2D" uid="uid://u25as6rew3yj" path="res://ui/score_label/asset/class7.png" id="8_c45j2"]
 
-[node name="TotalScore" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 6
+[node name="TotalScore" type="VBoxContainer"]
+anchors_preset = 3
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -20.0
-offset_bottom = 20.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -754.0
 grow_horizontal = 0
-grow_vertical = 2
+grow_vertical = 0
+theme_override_constants/separation = 24
 
-[node name="Class1" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class1" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("2_2j4mn")
 
-[node name="TeamName" parent="VBoxContainer/Class1" index="0"]
-text = "1組"
-
-[node name="Class2" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class2" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("3_cnmdq")
 
-[node name="TeamName" parent="VBoxContainer/Class2" index="0"]
-text = "2組"
-
-[node name="Class3" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class3" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("4_0f2x1")
 
-[node name="TeamName" parent="VBoxContainer/Class3" index="0"]
-text = "3組"
-
-[node name="Class4" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class4" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("5_7ydl7")
 
-[node name="TeamName" parent="VBoxContainer/Class4" index="0"]
-text = "4組"
-
-[node name="Class5" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class5" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("6_oymyk")
 
-[node name="TeamName" parent="VBoxContainer/Class5" index="0"]
-text = "5組"
+[node name="Score" parent="Class5" index="0"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="Class6" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class6" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("7_gffwi")
 
-[node name="TeamName" parent="VBoxContainer/Class6" index="0"]
-text = "6組"
+[node name="Score" parent="Class6" index="0"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="Class7" parent="VBoxContainer" instance=ExtResource("1_ylrda")]
+[node name="Class7" parent="." instance=ExtResource("1_ylrda")]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("8_c45j2")
 
-[node name="TeamName" parent="VBoxContainer/Class7" index="0"]
-text = "7組"
-
-[editable path="VBoxContainer/Class1"]
-[editable path="VBoxContainer/Class2"]
-[editable path="VBoxContainer/Class3"]
-[editable path="VBoxContainer/Class4"]
-[editable path="VBoxContainer/Class5"]
-[editable path="VBoxContainer/Class6"]
-[editable path="VBoxContainer/Class7"]
+[editable path="Class5"]
+[editable path="Class6"]
