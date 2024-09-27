@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dra2yi7akvyq1"]
+
+[ext_resource type="PackedScene" uid="uid://l34ol62fwjg5" path="res://ui/class_box/base.tscn" id="1_ltj7d"]
+
+[node name="Class6" instance=ExtResource("1_ltj7d")]
+color = Color(0.968627, 0.92549, 0.321569, 1)
+
+[node name="Label" parent="." index="0"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "6組"

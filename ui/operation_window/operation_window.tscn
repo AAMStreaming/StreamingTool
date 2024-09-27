@@ -8,11 +8,14 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 42.0
+offset_right = 12.0
+offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_fph6k")
 script = ExtResource("2_1ku6c")
-metadata/_edit_horizontal_guides_ = [-165.0]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -30,6 +33,10 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2"]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "競技の状況"
 
 [node name="EventContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
@@ -76,114 +83,157 @@ unique_name_in_owner = true
 layout_mode = 2
 button_pressed = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "試合数"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer3/HBoxContainer2"]
 layout_mode = 2
 text = "第"
 
-[node name="MatchNumber" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+[node name="MatchNumber" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer3/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 min_value = 1.0
 value = 1.0
 alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer3/HBoxContainer2"]
 layout_mode = 2
 text = "試合"
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
 
-[node name="TotalScoreContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "対戦相手を表示するか？"
+
+[node name="NeedMatchClass" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
+button_pressed = true
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
-text = "合計得点"
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
-columns = 2
+text = "対戦相手"
 
-[node name="Label1" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
-text = "1組"
+theme_override_constants/separation = 16
 
-[node name="Class1" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="First" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4/HBoxContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 10000.0
+min_value = 1.0
+max_value = 7.0
+value = 1.0
+alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4/HBoxContainer3"]
 layout_mode = 2
-text = "2組"
+text = "組"
 
-[node name="Class2" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4/HBoxContainer3"]
+layout_mode = 2
+text = "vs"
+
+[node name="Second" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4/HBoxContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 10000.0
+min_value = 1.0
+max_value = 7.0
+value = 1.0
+alignment = 1
 
-[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer4/HBoxContainer3"]
 layout_mode = 2
-text = "3組"
+text = "組"
 
-[node name="Class3" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "タイマーを表示するか？"
+
+[node name="NeedTimer" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "※これより下の設定は更新ボタンを押さなくても
+勝手に更新されます"
+horizontal_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "タイマーの種類"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "カウントダウン"
+popup/item_0/id = 0
+popup/item_1/text = "カウントアップ"
+popup/item_1/id = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "タイマーの初期値"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Min" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 10000.0
+alignment = 1
 
-[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7/HBoxContainer"]
 layout_mode = 2
-text = "4組"
+text = ":"
 
-[node name="Class4" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Sec" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 10000.0
+max_value = 59.0
+alignment = 1
 
-[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
-text = "5組"
+alignment = 1
 
-[node name="Class5" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
-unique_name_in_owner = true
+[node name="Start" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer8"]
 layout_mode = 2
-max_value = 10000.0
+text = "開始"
 
-[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
+[node name="Stop" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer8"]
 layout_mode = 2
-text = "6組"
+text = "一時停止"
 
-[node name="Class6" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
-unique_name_in_owner = true
+[node name="Reset" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer8"]
 layout_mode = 2
-max_value = 10000.0
-
-[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
-layout_mode = 2
-text = "7組"
-
-[node name="Class7" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/GridContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-max_value = 10000.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/HBoxContainer"]
-layout_mode = 2
-text = "得点を????で隠すか？"
-
-[node name="HideTotalScore" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/TotalScoreContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
+text = "リセット"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -203,8 +253,110 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TotalScoreContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer"]
+layout_mode = 2
+text = "合計得点"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label1" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "1組"
+
+[node name="Class1" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "2組"
+
+[node name="Class2" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "3組"
+
+[node name="Class3" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "4組"
+
+[node name="Class4" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "5組"
+
+[node name="Class5" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "6組"
+
+[node name="Class6" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+layout_mode = 2
+text = "7組"
+
+[node name="Class7" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/HBoxContainer"]
+layout_mode = 2
+text = "得点を????で隠すか？"
+
+[node name="HideTotalScore" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2/TotalScoreContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="UpdateButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "更新"
 
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer6/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7/HBoxContainer/Min" to="." method="_on_initial_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer7/HBoxContainer/Sec" to="." method="_on_initial_value_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer8/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer8/Stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer8/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="VBoxContainer/UpdateButton" to="." method="_on_update_button_pressed"]

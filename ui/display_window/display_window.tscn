@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhggfftvfl712"]
+[gd_scene load_steps=7 format=3 uid="uid://dhggfftvfl712"]
 
 [ext_resource type="PackedScene" uid="uid://bogfygmnyaako" path="res://ui/total_score/total_score.tscn" id="1_kdvjr"]
 [ext_resource type="Script" path="res://ui/display_window/display_window.gd" id="1_q86rp"]
 [ext_resource type="PackedScene" uid="uid://n2i0p4ukf4c5" path="res://ui/operation_window/operation_window.tscn" id="1_ym0wc"]
 [ext_resource type="Texture2D" uid="uid://bpgj8c1qpqhpd" path="res://ui/score_label/asset/comment.png" id="2_8ngnp"]
 [ext_resource type="Texture2D" uid="uid://djhfgillmwryb" path="res://ui/score_label/asset/event.png" id="4_mlvoy"]
+[ext_resource type="PackedScene" uid="uid://buk4sebm2evts" path="res://ui/status/status.tscn" id="6_w74oh"]
 
 [node name="DisplayWindow" type="Node"]
 script = ExtResource("1_q86rp")
@@ -16,6 +17,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Status" parent="Control" instance=ExtResource("6_w74oh")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.02
+anchor_bottom = 0.02
+offset_right = 390.4
+offset_bottom = 95.6
 
 [node name="TotalScore" parent="Control" instance=ExtResource("1_kdvjr")]
 unique_name_in_owner = true
@@ -52,10 +64,15 @@ autowrap_mode = 1
 
 [node name="EventTextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -154.0
 offset_right = 445.0
-offset_bottom = 154.0
+grow_vertical = 0
 texture = ExtResource("4_mlvoy")
 expand_mode = 5
+flip_v = true
 
 [node name="CenterContainer" type="VBoxContainer" parent="Control/EventTextureRect"]
 layout_mode = 1
@@ -99,6 +116,7 @@ vertical_alignment = 1
 
 [node name="Window" type="Window" parent="."]
 initial_position = 1
-size = Vector2i(960, 540)
+size = Vector2i(800, 600)
 
 [node name="OperationWindow" parent="Window" instance=ExtResource("1_ym0wc")]
+metadata/_edit_horizontal_guides_ = [-165.0]

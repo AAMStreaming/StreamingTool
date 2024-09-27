@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://buk4sebm2evts"]
+
+[ext_resource type="Script" path="res://ui/status/status.gd" id="1_ja7k2"]
+[ext_resource type="PackedScene" uid="uid://l34ol62fwjg5" path="res://ui/class_box/base.tscn" id="2_51slh"]
+
+[node name="Status" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+script = ExtResource("1_ja7k2")
+
+[node name="ClassContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="First" type="Control" parent="ClassContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+
+[node name="Base" parent="ClassContainer/First" instance=ExtResource("2_51slh")]
+layout_mode = 0
+
+[node name="VS" type="ColorRect" parent="ClassContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ClassContainer/VS"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "vs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second" type="Control" parent="ClassContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+
+[node name="Base" parent="ClassContainer/Second" instance=ExtResource("2_51slh")]
+layout_mode = 0
+
+[node name="TimerContainer" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Label" parent="TimerContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "12:34"
+horizontal_alignment = 1
+vertical_alignment = 1
